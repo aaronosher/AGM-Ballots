@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {SuiModule} from 'ng2-semantic-ui';
+import { AppRouterModule } from './app-router.module';
 
 
 import { AppComponent } from './app.component';
@@ -24,7 +25,8 @@ import { LoginComponent } from './pages/login/login.component';
   ],
   imports: [
     BrowserModule,
-    SuiModule
+    SuiModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
