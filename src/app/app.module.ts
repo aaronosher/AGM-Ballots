@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {SuiModule} from 'ng2-semantic-ui';
 import { AppRouterModule } from './app-router.module';
 
+import { BallotService } from './services/ballot.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -28,7 +29,7 @@ import { LoginComponent } from './pages/login/login.component';
     SuiModule,
     AppRouterModule
   ],
-  providers: [],
+  providers: [BallotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
