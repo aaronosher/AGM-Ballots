@@ -5,7 +5,8 @@
  * @enum MultiSeat indicates a vote where multiple people can win. A committee that has multiple social secretaries would use MultiSeat.
  */
 export enum BallotType {
-  Basic,
-  Seat,
+  BasicBallot,
+  NoAbstain,
+  SingleSeat,
   MultiSeat,
 }
