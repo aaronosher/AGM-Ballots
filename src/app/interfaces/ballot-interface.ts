@@ -12,6 +12,12 @@ export interface BallotInterface {
   name: string;
 
   /**
+   * Description of the ballot item
+   * @var string
+   */
+  description: string;
+
+  /**
    * Type of ballot being used. See BallotType enum for details of types
    * @var BallotType
    */
