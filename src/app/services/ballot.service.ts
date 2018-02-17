@@ -10,13 +10,22 @@ export class BallotService {
   getAll(): BallotInterface[] {
     const basicBallot: BallotInterface = {
       name: 'Basic Example',
-      type: BallotType.Basic,
+      description: 'Example of a basic ballot',
+      type: BallotType.BasicBallot,
+      options: null
+    };
+
+    const noAbstainBallot: BallotInterface = {
+      name: 'No Abstain Example',
+      description: 'Example of a No Abstain ballot',
+      type: BallotType.NoAbstain,
       options: null
     };
 
     const singeSeatBallot: BallotInterface = {
       name: 'Single Seat Example',
-      type: BallotType.Seat,
+      description: 'Example of a single seat ballot',
+      type: BallotType.SingleSeat,
       options: [
         { id: 1, name: 'Candidate 1', description: 'Candidate 1\'s manifesto.' },
         { id: 2, name: 'Candidate 2', description: 'Candidate 2\'s manifesto.' },
@@ -27,6 +36,7 @@ export class BallotService {
 
     const mutliSeatBallot: BallotInterface = {
       name: 'Multi Seat Example',
+      description: 'Example of a multi seat ballot',
       type: BallotType.MultiSeat,
       options: [
         { id: 5, name: 'Candidate 1', description: 'Candidate 1\'s manifesto.' },
@@ -37,7 +47,7 @@ export class BallotService {
       ]
     };
 
-    return [basicBallot, singeSeatBallot, mutliSeatBallot];
+    return [basicBallot, noAbstainBallot, singeSeatBallot, mutliSeatBallot];
   }
 
 }
